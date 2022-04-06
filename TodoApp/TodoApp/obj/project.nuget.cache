@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JpZCzTPKptC2wUo43+A5n5Y2/xO8+qvDBKANdqLeai75GP6zDvOxr8XDqcYiBxJQoqaC2zR8G7U2CZMxJSaz6g==",
+  "dgSpecHash": "Ubxg7+IhpsTffEzhlRF8ZIFGPIMuylQMsN6Awkz6Ddt0yVxcB5Ys5xU/PSeierfr3eo3oBzvYOzFrlTLHKsucw==",
   "success": true,
   "projectFilePath": "/Users/moxitshah/Documents/WEB/LAB/TodoApp/TodoApp/TodoApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/moxitshah/.nuget/packages/microsoft.visualstudio.web.codegeneration.contracts/3.1.5/microsoft.visualstudio.web.codegeneration.contracts.3.1.5.nupkg.sha512",
+    "/Users/moxitshah/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

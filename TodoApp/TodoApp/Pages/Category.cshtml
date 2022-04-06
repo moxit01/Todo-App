@@ -1,0 +1,27 @@
+﻿@page
+@model TodoApp.Pages.CategoryModel
+@{
+    Layout = null;
+
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Category</title>
+
+</head>
+<body>
+    @foreach (var item in Model.Items)
+    {
+        <div>ToDoItem: @item.Name</div><br />
+        <div>ToDoItem: @item.Id</div><br />
+        <div>ToDoItem: @item.Descrip</div><br />
+        <div>ToDoItem: @item.IsDone</div><br />
+    }
+
+</body>
+</html>
