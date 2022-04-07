@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{C3EEBBC4-DD37-4660-96F6-8A5B3BB07B0A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TodoApp/Pages/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TodoApp/Services/ToDoService.cs">
     <Files>
-      <File FileName="TodoApp/Services/ToDoService.cs" Line="16" Column="74" />
-      <File FileName="TodoApp/Pages/Category.cshtml" Line="65" Column="1" />
-      <File FileName="TodoApp/Pages/Category.cshtml.cs" Line="1" Column="1" />
-      <File FileName="TodoApp/Pages/Index.cshtml" Line="1" Column="1" />
+      <File FileName="TodoApp/Services/ToDoService.cs" Line="70" Column="1" />
+      <File FileName="TodoApp/Pages/Category.cshtml" Line="40" Column="66" />
+      <File FileName="TodoApp/Pages/Category.cshtml.cs" Line="30" Column="49" />
+      <File FileName="TodoApp/Pages/Index.cshtml" Line="31" Column="100" />
       <File FileName="TodoApp/Pages/Index.cshtml.cs" Line="1" Column="1" />
+      <File FileName="TodoApp/Startup.cs" Line="32" Column="52" />
+      <File FileName="TodoApp/Pages/Shared/_Layout.cshtml" Line="25" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,11 +19,13 @@
                 <Node name="Shared" expanded="True" />
                 <Node name="Category.cshtml" expanded="True" />
                 <Node name="Error.cshtml" expanded="True" />
-                <Node name="Index.cshtml" expanded="True" selected="True" />
+                <Node name="Index.cshtml" expanded="True" />
                 <Node name="Privacy.cshtml" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="ToDoService.cs" selected="True" />
+              </Node>
               <Node name="wwwroot" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>

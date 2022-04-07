@@ -27,10 +27,10 @@ namespace TodoApp
             services.AddRazorPages();
             services.AddTransient<ToDoService>();
             services.AddSingleton<ToDoService>(new ToDoService());
-            //services.AddMvc().AddRazorPagesOptions(options =>
-            //{
-            //    options.Conventions.AddPageRoute("/Index", "");
-            //});
+            services.AddMvc().AddRazorPagesOptions(options =>
+            {
+                options.Conventions.AddPageRoute("/", "");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
