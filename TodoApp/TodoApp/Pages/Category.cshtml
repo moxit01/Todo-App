@@ -1,7 +1,8 @@
-﻿@page
+﻿@page "{id:int?}"
 @model TodoApp.Pages.CategoryModel
 @{
-    Layout = null;
+    ViewData["Title"] = "Add ToDo";
+   
 
 }
 
@@ -15,13 +16,51 @@
 
 </head>
 <body>
-    @foreach (var item in Model.Items)
-    {
-        <div>ToDoItem: @item.Name</div><br />
-        <div>ToDoItem: @item.Id</div><br />
-        <div>ToDoItem: @item.Descrip</div><br />
-        <div>ToDoItem: @item.IsDone</div><br />
-    }
+
+    <form method="post">
+        <fieldset>
+
+            @*<div>
+                    <label for="Name">Id: </label>
+                    <input type="text" name="Id" value="@Html.DisplayFor(modelItem => Model)" />
+                </div>*@
+
+            <div>
+                <label for="Name">Name: </label>
+                <input type="text" name="Name" value="@Html.DisplayFor(modelItem => Model.Name)" />
+            </div>
+
+            <div>
+                <label for="Description">Description: </label>
+                <input type="text" name="Description" value="@Html.DisplayFor(modelItem => Model.Description)" />
+            </div>
+
+            <div>
+                <label>&nbsp</label>
+                <td><input type="submit" value=" Submit" asp-page-handler="Submit" /></td>
+            </div>
+
+
+            @*value="@Html.DisplayFor(ToDoItem => Model.Name)"*@
+
+            @*@foreach (var item in Model.Items)
+                {
+                    <div>ToDoItem: @item.Name</div><br />
+                    <div>ToDoItem: @item.Id</div><br />
+                    <div>ToDoItem: @item.Descrip</div><br />
+                    <div>ToDoItem: @item.IsDone</div><br />
+                }*@
+
+
+        </fieldset>
+
+    </form>
 
 </body>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
 </html>

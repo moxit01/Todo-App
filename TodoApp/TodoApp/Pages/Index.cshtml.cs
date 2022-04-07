@@ -5,21 +5,44 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using TodoApp.Model;
+using TodoApp.Services;
 
 namespace TodoApp.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ToDoService _service;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        
+
+        public IndexModel(ToDoService service)
         {
-            _logger = logger;
+            _service = service;
         }
 
-        public void OnGet()
-        {
 
+        public List<ToDoListModel> Items { get; set; }
+
+
+
+        public ActionResult OnGet()
+        {
+            Items = _service.GetUncompleteToDos();
+            return Page();
         }
+
+        public IActionResult OnPostSubmit(int id)
+        {
+            List<ToDoListModel> items = _service.GetUncompleteToDos();
+            ToDoListModel model = items.Find(m => m.Id == id);
+
+            Items = _service.MarkCompleted(model);
+            return Page();
+        }
+
+
+
+
     }
 }
